@@ -78,7 +78,7 @@ button { font: inherit; }
   inset: 0 0 auto;
   height: var(--header-height);
   border-bottom: 1px solid rgba(255,255,255,.08);
-  background: rgba(3,3,5,.62);
+  background: rgba(27, 27, 43, 0.24);
   backdrop-filter: blur(16px);
 }
 
@@ -167,28 +167,149 @@ button { font: inherit; }
   background: currentColor;
 }
 
+
+
 .hero {
   min-height: 100svh;
+
   position: relative;
+
   isolation: isolate;
+
   display: grid;
   align-items: end;
+
   overflow: hidden;
-  background:
-    radial-gradient(circle at 75% 25%, rgba(239,57,174,.18), transparent 32%),
-    radial-gradient(circle at 20% 60%, rgba(52,124,255,.18), transparent 34%),
-    #050507;
+
+  background: #05050700;
 }
 
-.hero::before {
-  content: "";
+
+/* =====================================================
+   BACKGROUND
+   ===================================================== */
+
+.hero-background {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: -3;
+
+  overflow: hidden;
+}
+
+
+/* FOTO */
+
+.hero-background-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  /*
+    Ajuste o enquadramento aqui.
+    Exemplos:
+
+    center center
+    center top
+    60% center
+    70% top
+  */
+
+  object-position: center center;
+
+  filter:
+    brightness(.52)
+    contrast(1.08)
+    saturate(.9);
+
+  transform: scale(1.03);
+}
+
+
+/* =====================================================
+   LUZ AZUL
+   ===================================================== */
+
+.hero-glow {
+  position: absolute;
+
+  pointer-events: none;
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  mix-blend-mode: screen;
+
+  opacity: .55;
+}
+
+
+.hero-glow-blue {
+  width: 650px;
+  height: 650px;
+
+  left: -250px;
+  top: 5%;
+
+  background:
+    rgba(52, 124, 255, .65);
+}
+
+
+/* =====================================================
+   LUZ VIOLETA
+   ===================================================== */
+
+.hero-glow-violet {
+  width: 750px;
+  height: 600px;
+
+  left: 30%;
+  bottom: -350px;
+
+  background:
+    rgba(155, 66, 255, .65);
+}
+
+
+/* =====================================================
+   LUZ ROSA
+   ===================================================== */
+
+.hero-glow-pink {
+  width: 600px;
+  height: 700px;
+
+  right: -250px;
+  bottom: -100px;
+
+  background:
+    rgba(239, 57, 174, .55);
+}
+
+
+/* =====================================================
+   OVERLAY
+   ===================================================== */
+
+.hero-overlay {
   position: absolute;
   inset: 0;
-  z-index: -2;
-  background:
-    linear-gradient(90deg, rgba(0,0,0,.82) 0%, rgba(0,0,0,.52) 48%, rgba(0,0,0,.38) 100%),
-    linear-gradient(0deg, rgba(3,2,7,.98) 0%, rgba(3,2,7,.12) 65%, rgba(0,0,0,.2) 100%),
-    url("https://images.unsplash.com/photo-1598373182133-52452f7691ef?auto=format&fit=crop&w=2200&q=88") center/cover no-repeat;
+
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, .45) 0%,
+    rgba(0, 0, 0, .20) 45%,
+    rgba(0, 0, 0, .08) 100%
+  );
 }
 
 .hero-content {
@@ -496,19 +617,100 @@ button { font: inherit; }
 
 .socials {
   display: flex;
-  gap: 8px;
+  gap: 10px;
 }
 
 .socials a {
+  position: relative;
   display: grid;
   place-items: center;
-  width: 38px;
-  height: 38px;
-  border: 1px solid rgba(155,66,255,.55);
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.02);
+
+  color: #ffffff;
   text-decoration: none;
-  font-size: 11px;
-  font-weight: 800;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.socials svg {
+  width: 18px;
+  height: 18px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Instagram — rosa/magenta */
+.social-instagram {
+  color: #ef39ae !important;
+  border-color: rgba(239, 57, 174, 0.45) !important;
+}
+
+.social-instagram:hover {
+  color: #ffffff !important;
+  border-color: #ef39ae !important;
+
+  background: rgba(239, 57, 174, 0.12);
+
+  box-shadow:
+    0 0 12px rgba(239, 57, 174, 0.45),
+    0 0 28px rgba(239, 57, 174, 0.18);
+
+  transform: translateY(-3px);
+}
+
+
+/* TikTok — azul */
+.social-tiktok {
+  color: #347cff !important;
+  border-color: rgba(52, 124, 255, 0.45) !important;
+}
+
+.social-tiktok:hover {
+  color: #ffffff !important;
+  border-color: #347cff !important;
+
+  background: rgba(52, 124, 255, 0.12);
+
+  box-shadow:
+    0 0 12px rgba(52, 124, 255, 0.45),
+    0 0 28px rgba(52, 124, 255, 0.18);
+
+  transform: translateY(-3px);
+}
+
+
+/* WhatsApp — violeta */
+.social-whatsapp {
+  color: #9b42ff !important;
+  border-color: rgba(155, 66, 255, 0.45) !important;
+}
+
+.social-whatsapp:hover {
+  color: #ffffff !important;
+  border-color: #9b42ff !important;
+
+  background: rgba(155, 66, 255, 0.12);
+
+  box-shadow:
+    0 0 12px rgba(155, 66, 255, 0.45),
+    0 0 28px rgba(155, 66, 255, 0.18);
+
+  transform: translateY(-3px);
 }
 
 .footer-bottom {
