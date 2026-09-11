@@ -68,7 +68,7 @@ button { font: inherit; }
 .skip-link:focus { transform: translateY(0); }
 
 .container {
-  width: min(calc(100% - 40px), var(--container));
+  width: min(calc(100% - 200px), var(--container));
   margin-inline: auto;
 }
 
@@ -124,7 +124,7 @@ button { font: inherit; }
   border-radius: 999px;
   text-align: center;
   text-decoration: none;
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 800;
   letter-spacing: .08em;
   color: #aaa7b0;
@@ -182,6 +182,711 @@ button { font: inherit; }
   overflow: hidden;
 
   background: #05050700;
+}
+
+/* =========================================================
+   NOVO HEADER — DESKTOP + TABLET + MOBILE
+   Adicione este bloco AO FINAL do seu CSS
+   ========================================================= */
+
+/* ---------- HEADER BASE ---------- */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1000;
+  background: rgba(1, 1, 1, 0.333);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.site-header .container {
+  width: min(calc(100% - 80px), var(--container));
+  height: 100%;
+  margin: 0 auto;
+}
+
+.header-inner {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 30px;
+}
+
+
+/* ---------- LOGO ---------- */
+
+.logo {
+  justify-self: start;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+
+/* ---------- MENU DESKTOP ---------- */
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+}
+
+.desktop-nav a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 80px;
+
+  color: #f9f9f9;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+
+  transition:
+    color 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.desktop-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    #ff4fa3,
+    #7c5cff,
+    #20c8ff
+  );
+
+  transform: scaleX(0);
+  transform-origin: center;
+
+  transition: transform 0.25s ease;
+}
+
+.desktop-nav a:hover::after,
+.desktop-nav a[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+
+.desktop-nav a:hover {
+  color: #7b7b7b;
+}
+
+
+/* ---------- AÇÕES DO HEADER ---------- */
+
+.header-actions {
+  justify-self: end;
+
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+
+/* ---------- IDIOMAS ---------- */
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.language-switcher a {
+  color: #ffffff;
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+
+  transition: opacity 0.2s ease;
+}
+
+.language-switcher a:hover {
+  opacity: 0.55;
+}
+
+.language-switcher a[aria-current="page"] {
+  font-weight: 700;
+}
+
+
+/* ---------- BOTÃO MENU ---------- */
+
+.menu-button {
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 0;
+  border: 0;
+  background: transparent;
+
+  color: #fcfbfb;
+  cursor: pointer;
+}
+
+.menu-label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+
+  width: 24px;
+}
+
+.menu-icon span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+/* =====================================================
+   CONTATO / BRIEFING DE TATUAGEM
+===================================================== */
+
+.tattoo-contact {
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(52, 124, 255, .08),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(239, 57, 174, .08),
+      transparent 35%
+    ),
+    var(--bg);
+}
+
+
+/* INTRO */
+
+.contact-intro {
+  max-width: 760px;
+  margin-bottom: 50px;
+}
+
+.contact-intro h2 {
+  margin: 0 0 18px;
+  color: var(--text);
+  font-size: clamp(2.3rem, 5vw, 4.5rem);
+  line-height: .95;
+  letter-spacing: -.04em;
+}
+
+.contact-intro p:last-child {
+  max-width: 650px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+
+/* FORMULÁRIO */
+
+.tattoo-form {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: clamp(24px, 5vw, 55px);
+
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.045),
+      rgba(255,255,255,.015)
+    );
+
+  box-shadow: var(--shadow);
+}
+
+
+/* SEÇÕES */
+
+.form-section {
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--line);
+}
+
+.form-section:last-of-type {
+  margin-bottom: 35px;
+}
+
+
+/* TÍTULO DA SEÇÃO */
+
+.form-section-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 28px;
+}
+
+.form-section-title span {
+  display: grid;
+  place-items: center;
+
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--blue),
+      var(--violet),
+      var(--pink)
+    );
+
+  color: #fff;
+  font-size: .75rem;
+  font-weight: 800;
+}
+
+.form-section-title h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.25rem;
+}
+
+
+/* CAMPOS */
+
+.tattoo-form .field {
+  margin-bottom: 22px;
+}
+
+.tattoo-form .form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.tattoo-form label {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--text);
+  font-size: .9rem;
+  font-weight: 650;
+}
+
+
+.tattoo-form input,
+.tattoo-form select,
+.tattoo-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  border: 1px solid var(--line);
+  border-radius: 14px;
+
+  padding: 15px 17px;
+
+  background: rgba(0, 0, 0, .28);
+  color: var(--text);
+
+  font: inherit;
+
+  outline: none;
+
+  transition:
+    border-color .25s ease,
+    box-shadow .25s ease,
+    background .25s ease;
+}
+
+
+.tattoo-form input::placeholder,
+.tattoo-form textarea::placeholder {
+  color: #77747d;
+}
+
+
+.tattoo-form select {
+  cursor: pointer;
+}
+
+
+.tattoo-form option {
+  background: var(--surface);
+  color: var(--text);
+}
+
+
+.tattoo-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+
+.tattoo-form input:focus,
+.tattoo-form select:focus,
+.tattoo-form textarea:focus {
+  border-color: var(--violet);
+
+  background: rgba(155, 66, 255, .04);
+
+  box-shadow:
+    0 0 0 3px rgba(155, 66, 255, .10);
+}
+
+
+.tattoo-form small {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: .78rem;
+  line-height: 1.5;
+}
+
+
+/* ERRO */
+
+.tattoo-form .field.has-error input,
+.tattoo-form .field.has-error select,
+.tattoo-form .field.has-error textarea {
+  border-color: #ff4d7d;
+}
+
+
+/* BOTÃO */
+
+.tattoo-form .gradient-button {
+  width: 100%;
+  min-height: 56px;
+  cursor: pointer;
+}
+
+
+/* STATUS */
+
+.form-note {
+  margin: 15px 0 0;
+  color: var(--muted);
+  font-size: .82rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 700px) {
+
+  .tattoo-form {
+    padding: 25px 20px;
+    border-radius: 20px;
+  }
+
+  .tattoo-form .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-section-title {
+    margin-bottom: 24px;
+  }
+
+  .contact-intro {
+    margin-bottom: 35px;
+  }
+
+}
+
+/* =========================================================
+   MENU MOBILE / TABLET
+   ========================================================= */
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+
+  display: none;
+
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.menu-overlay[aria-hidden="false"] {
+  display: block;
+}
+
+.menu-backdrop {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: min(420px, 88vw);
+  height: 100%;
+
+  padding: 100px 40px 40px;
+
+  background: #fff;
+
+  overflow-y: auto;
+
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.menu-overlay[aria-hidden="false"] .menu-panel {
+  transform: translateX(0);
+}
+
+
+/* ---------- BOTÃO FECHAR ---------- */
+
+.close-button {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  background: transparent;
+
+  font-size: 32px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+
+/* ---------- LINKS DO MENU ---------- */
+
+.menu-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.menu-nav a {
+  color: #fffefe;
+  text-decoration: none;
+
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.2;
+
+  transition: opacity 0.2s ease;
+}
+
+.menu-nav a:hover {
+  opacity: 0.55;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+  .site-header {
+    height: 72px;
+  }
+
+  .site-header .container {
+    width: min(calc(100% - 48px), var(--container));
+  }
+
+  .header-inner {
+    grid-template-columns: 1fr auto auto;
+    gap: 20px;
+  }
+
+  .desktop-nav {
+    gap: 22px;
+  }
+
+  .desktop-nav a {
+    font-size: 13px;
+    height: 72px;
+  }
+
+  .desktop-nav a::after {
+    bottom: 17px;
+  }
+
+  .language-switcher {
+    gap: 10px;
+  }
+}
+
+
+/* =========================================================
+   TABLET MENOR / ENTRA MENU HAMBÚRGUER
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .site-header {
+    height: 70px;
+  }
+
+  .site-header .container {
+    width: calc(100% - 40px);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  /* Esconde menu horizontal */
+  .desktop-nav {
+    display: none;
+  }
+
+  /* Logo à esquerda */
+  .logo {
+    flex: 1;
+  }
+
+  /* Idiomas + botão à direita */
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .menu-button {
+    display: flex;
+  }
+
+  .language-switcher {
+    gap: 10px;
+  }
+
+  .language-switcher a {
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .site-header {
+    height: 64px;
+  }
+
+  .site-header .container {
+    width: calc(100% - 28px);
+  }
+
+  .header-actions {
+    gap: 12px;
+  }
+
+  .language-switcher {
+    gap: 7px;
+  }
+
+  .language-switcher a {
+    font-size: 10px;
+  }
+
+  .menu-label {
+    display: none;
+  }
+
+  .menu-icon {
+    width: 22px;
+  }
+
+  .menu-panel {
+    width: 88vw;
+    padding: 90px 28px 30px;
+  }
+
+  .menu-nav {
+    gap: 20px;
+  }
+
+  .menu-nav a {
+    font-size: 24px;
+  }
+}
+
+
+/* =========================================================
+   CELULAR MUITO PEQUENO
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  .site-header .container {
+    width: calc(100% - 20px);
+  }
+
+  .language-switcher {
+    gap: 5px;
+  }
+
+  .language-switcher a {
+    font-size: 9px;
+  }
+
+  .menu-icon {
+    width: 20px;
+  }
 }
 
 
@@ -313,8 +1018,8 @@ button { font: inherit; }
 }
 
 .hero-content {
-  padding-block: 150px 84px;
-  max-width: 850px;
+  padding-block: 100px 80px;
+  max-width: 1150px;
 }
 
 .eyebrow,
@@ -329,8 +1034,8 @@ button { font: inherit; }
 
 .hero h1 {
   margin: 0;
-  max-width: 900px;
-  font-size: clamp(58px, 9vw, 124px);
+  max-width: 500px;
+  font-size: clamp(50px, 9vw, 80px);
   line-height: .83;
   letter-spacing: -.055em;
   text-transform: uppercase;
@@ -343,7 +1048,7 @@ button { font: inherit; }
   max-width: 620px;
   margin: 34px 0 0;
   color: #b8b5bc;
-  font-size: clamp(16px, 2vw, 20px);
+  font-size: clamp(16px, 2vw, 17px);
 }
 
 .gradient-button {
@@ -393,7 +1098,7 @@ button { font: inherit; }
 }
 
 .section {
-  padding-block: 110px;
+  padding-block: 50px;
 }
 
 .section-dark { background: #050505; }
@@ -406,21 +1111,21 @@ button { font: inherit; }
 }
 
 .section-heading {
-  max-width: 850px;
+  max-width: 1450px;
   margin-bottom: 48px;
 }
 
 .section-heading h2 {
   margin: 0;
   max-width: 760px;
-  font-size: clamp(42px, 6vw, 78px);
+  font-size: clamp(40px, 6vw, 50px);
   line-height: .94;
   letter-spacing: -.045em;
   text-transform: uppercase;
 }
 
 .section-heading p {
-  max-width: 720px;
+  max-width: 1450px;
   margin: 24px 0 0;
   color: var(--muted);
   font-size: 17px;
@@ -729,7 +1434,7 @@ button { font: inherit; }
 .page-main { padding-top: var(--header-height); }
 
 .page-hero {
-  padding-block: 120px 70px;
+  padding-block: 50px 70px;
   background:
     radial-gradient(circle at 20% 20%, rgba(52,124,255,.13), transparent 30%),
     radial-gradient(circle at 80% 20%, rgba(239,57,174,.12), transparent 32%),
@@ -737,9 +1442,9 @@ button { font: inherit; }
 }
 
 .page-hero h1 {
-  max-width: 950px;
+  max-width: 1250px;
   margin: 0;
-  font-size: clamp(52px, 8vw, 104px);
+  font-size: clamp(50px, 8vw, 55px);
   line-height: .9;
   letter-spacing: -.055em;
   text-transform: uppercase;
@@ -783,18 +1488,18 @@ button { font: inherit; }
   position: absolute;
   inset: 0;
   border: 0;
-  background: rgba(0,0,0,.72);
-  backdrop-filter: blur(8px);
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(2px);
   cursor: pointer;
 }
 
 .menu-panel {
   position: relative;
-  width: min(520px, 100%);
+  width: min(300px, 100%);
   min-height: 100%;
-  padding: 24px 34px 34px;
+  padding: 20px;
   overflow-y: auto;
-  background: rgba(5,5,8,.97);
+  background: rgba(5, 5, 8, 0.322);
   border-left: 1px solid rgba(255,255,255,.1);
   transform: translateX(100%);
   transition: transform .35s cubic-bezier(.22,.61,.36,1);
@@ -814,10 +1519,10 @@ button { font: inherit; }
 
 .menu-nav a {
   display: block;
-  padding: 20px 0;
+  padding: 10px 0;
   border-bottom: 1px solid rgba(255,255,255,.08);
   text-decoration: none;
-  font-size: clamp(28px, 5vw, 42px);
+  font-size: clamp(18px, 5vw, 10px);
   line-height: 1;
   font-weight: 850;
   letter-spacing: -.03em;
@@ -829,10 +1534,10 @@ button { font: inherit; }
 .menu-bottom {
   display: grid;
   gap: 22px;
-  margin-top: 70px;
+  margin-top: 30px;
 }
 
-.menu-bottom .language-switcher { justify-content: flex-start; }
+.menu-bottom .language-switcher { justify-content: center; }
 
 .form {
   max-width: 760px;
@@ -891,6 +1596,418 @@ button { font: inherit; }
   transform: none;
 }
 
+/* =====================================================
+   TATTOO GALLERY
+===================================================== */
+
+.tattoo-section {
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(52, 124, 255, .08),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 85% 70%,
+      rgba(239, 57, 174, .08),
+      transparent 35%
+    ),
+    var(--bg);
+}
+
+
+/* CABEÇALHO */
+
+.section-heading {
+  max-width: 720px;
+  margin-bottom: 48px;
+}
+
+.section-heading h2 {
+  margin: 0 0 16px;
+  color: var(--text);
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  line-height: .95;
+  letter-spacing: -.04em;
+}
+
+.section-description {
+  max-width: 620px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   FILTROS
+===================================================== */
+
+.tattoo-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.tattoo-filter {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 13px 24px;
+  background: rgba(255, 255, 255, .03);
+  color: var(--muted);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    color .25s ease,
+    border-color .25s ease,
+    background .25s ease,
+    transform .25s ease;
+}
+
+.tattoo-filter:hover {
+  color: var(--text);
+  border-color: rgba(155, 66, 255, .5);
+  transform: translateY(-2px);
+}
+
+.tattoo-filter.is-active {
+  border-color: transparent;
+  color: #fff;
+  background:
+    linear-gradient(
+      100deg,
+      var(--blue),
+      var(--violet),
+      var(--pink)
+    );
+  box-shadow:
+    0 10px 35px rgba(155, 66, 255, .22);
+}
+
+
+/* =====================================================
+   GALERIA
+===================================================== */
+
+.tattoo-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.tattoo-card {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  transition:
+    transform .35s ease,
+    border-color .35s ease,
+    opacity .3s ease;
+}
+
+.tattoo-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(155, 66, 255, .4);
+}
+
+
+/* IMAGEM */
+
+.tattoo-image-button {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  background: #000;
+  cursor: pointer;
+}
+
+.tattoo-image-button img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+
+.tattoo-card:hover .tattoo-image-button img {
+  transform: scale(1.05);
+}
+
+
+/* EFEITO AO PASSAR O MOUSE */
+
+.tattoo-card-overlay {
+  position: absolute;
+  inset: auto 16px 16px 16px;
+  padding: 12px 16px;
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: 999px;
+  background: rgba(5, 5, 5, .72);
+  backdrop-filter: blur(12px);
+  color: #fff;
+  font-size: .85rem;
+  font-weight: 700;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity .3s ease,
+    transform .3s ease;
+}
+
+.tattoo-card:hover .tattoo-card-overlay,
+.tattoo-image-button:focus-visible .tattoo-card-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* INFORMAÇÕES */
+
+.tattoo-card-info {
+  padding: 18px 20px 20px;
+}
+
+.tattoo-card-info h3 {
+  margin: 0 0 5px;
+  color: var(--text);
+  font-size: 1.1rem;
+}
+
+.tattoo-card-info span {
+  color: var(--muted);
+  font-size: .85rem;
+}
+
+
+/* =====================================================
+   MODAL / LIGHTBOX
+===================================================== */
+
+.tattoo-modal {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 30px;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity .3s ease,
+    visibility .3s ease;
+}
+
+.tattoo-modal.is-open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+/* FUNDO */
+
+.tattoo-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .88);
+  backdrop-filter: blur(12px);
+}
+
+
+/* CAIXA */
+
+.tattoo-modal-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 1000px);
+  max-height: calc(100vh - 60px);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow:
+    0 30px 100px rgba(0, 0, 0, .7);
+  transform: scale(.95);
+  transition: transform .3s ease;
+}
+
+.tattoo-modal.is-open .tattoo-modal-content {
+  transform: scale(1);
+}
+
+
+/* IMAGEM GRANDE */
+
+.tattoo-modal-image {
+  display: block;
+  width: 100%;
+  max-height: calc(100vh - 150px);
+  object-fit: contain;
+  background: #050505;
+}
+
+
+/* BOTÃO X */
+
+.tattoo-modal-close {
+  position: absolute;
+  z-index: 2;
+  top: 16px;
+  right: 16px;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-radius: 50%;
+  background: rgba(5, 5, 5, .7);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background .25s ease,
+    transform .25s ease;
+}
+
+.tattoo-modal-close:hover {
+  background:
+    linear-gradient(
+      135deg,
+      var(--violet),
+      var(--pink)
+    );
+  transform: rotate(90deg);
+}
+
+
+/* LEGENDA */
+
+.tattoo-modal-caption {
+  padding: 18px 24px;
+}
+
+.tattoo-modal-caption h2 {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.1rem;
+}
+
+
+/* =====================================================
+   ACESSIBILIDADE
+===================================================== */
+
+.tattoo-filter:focus-visible,
+.tattoo-image-button:focus-visible,
+.tattoo-modal-close:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 4px;
+}
+
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .tattoo-gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .section-heading {
+    margin-bottom: 32px;
+  }
+
+  .tattoo-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .tattoo-card {
+    border-radius: 18px;
+  }
+
+  .tattoo-card-info {
+    padding: 14px;
+  }
+
+  .tattoo-card-overlay {
+    display: none;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .tattoo-filters {
+    gap: 8px;
+  }
+
+  .tattoo-filter {
+    padding: 10px 17px;
+    font-size: .85rem;
+  }
+
+  .tattoo-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tattoo-image-button {
+    aspect-ratio: 3 / 4;
+  }
+
+  .tattoo-card-info h3 {
+    font-size: .95rem;
+  }
+
+  .tattoo-card-info span {
+    font-size: .75rem;
+  }
+
+  .tattoo-modal {
+    padding: 12px;
+  }
+
+  .tattoo-modal-content {
+    max-height: calc(100vh - 24px);
+    border-radius: 18px;
+  }
+
+  .tattoo-modal-image {
+    max-height: calc(100vh - 100px);
+  }
+
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after {
@@ -911,11 +2028,11 @@ button { font: inherit; }
   :root { --header-height: 68px; }
   .container { width: min(calc(100% - 28px), var(--container)); }
   .header-actions { gap: 6px; }
-  .language-switcher a { min-width: 32px; padding-inline: 7px; }
+  .language-switcher a { min-width: 30px; padding-inline: 7px; }
   .menu-button { padding-inline: 14px; }
   .menu-button .menu-label { display: none; }
   .hero-content { padding-block: 120px 48px; }
-  .hero h1 { font-size: clamp(50px, 16vw, 84px); }
+  .hero h1 { font-size: clamp(25px, 12vw, 50px); }
   .hero-tabs { display: grid; }
   .hero-tab { min-width: 0; }
   .section { padding-block: 80px; }

@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Completa el formulario y describe tu idea, ubicación en el cuerpo, tamaño aproximado y referencias.">
+  <meta name="theme-color" content="#050505">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+  <link rel="alternate" hreflang="pt-BR" href="../../pages/contato.html">
+  <link rel="alternate" hreflang="en" href="../../en/pages/contact.html">
+  <link rel="alternate" hreflang="es" href="hable.html">
+  <link rel="alternate" hreflang="x-default" href="../../pages/contato.html">
+  <title>Contacto — Sarah Tattoo</title>
+</head>
+<body>
+<a class="skip-link" href="#main-content">
+  Saltar al contenido
+</a>
+
+<header class="site-header">
+
+  <div class="container header-inner">
+
+    <!-- LOGO -->
+    <a
+      class="logo"
+      href="../index.html"
+      aria-label="Sarah Tattoo — inicio">
+      Sarah Monteiro
+    </a>
+
+
+    <!-- MENÚ DESKTOP -->
+    <nav
+      class="desktop-nav"
+      aria-label="Navegación principal">
+
+      <a href="../index.html" >
+        Inicio
+      </a>
+
+      <a href="sobremi.html">
+        Sobre mí
+      </a>
+
+      <a href="tatuage.html"
+      >
+        Tattoos
+      </a>
+
+      <a href="hable.html"
+      aria-current="page">
+        Contacto
+      </a>
+
+    </nav>
+
+
+    <!-- ACCIONES DEL HEADER -->
+    <div class="header-actions">
+
+      <!-- IDIOMAS -->
+      <nav
+        class="language-switcher"
+        aria-label="Idioma">
+
+        <a href="../index.html">
+          PT
+        </a>
+
+        <a href="../../en/index.html">
+          EN
+        </a>
+
+        <a href="#" aria-current="page">
+          ES
+        </a>
+
+      </nav>
+
+
+      <!-- MENÚ MÓVIL -->
+      <button
+        class="menu-button"
+        type="button"
+        data-menu-open
+        aria-controls="site-menu"
+        aria-expanded="false">
+
+        <span class="menu-label">
+          Menú
+        </span>
+
+        <span
+          class="menu-icon"
+          aria-hidden="true">
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+        </span>
+
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- MENÚ MÓVIL / TABLET -->
+
+<div
+  class="menu-overlay"
+  data-menu
+  id="site-menu"
+  aria-hidden="true">
+
+  <button
+    class="menu-backdrop"
+    type="button"
+    data-menu-backdrop
+    aria-label="Cerrar menú">
+  </button>
+
+
+  <aside
+    class="menu-panel"
+    aria-label="Navegación principal">
+
+    <div class="menu-top">
+
+      <a
+        class="logo"
+        href="../index.html"
+        aria-label="Sarah Tattoo — inicio">
+        Sarah Monteiro
+      </a>
+
+      <button
+        class="close-button"
+        type="button"
+        data-menu-close
+        aria-label="Cerrar menú">
+        ×
+      </button>
+
+    </div>
+
+
+    <nav
+      class="menu-nav"
+      aria-label="Menú">
+
+      <a
+        data-menu-link
+        href="../index.html"
+        >
+        Inicio
+      </a>
+
+      <a
+        data-menu-link
+        href="sobremi.html">
+        Sobre mí
+      </a>
+
+      <a
+        data-menu-link
+        href="tatuage.html"
+        >
+        Tattoos
+      </a>
+
+      <a
+        data-menu-link
+        href="hable.html"
+        aria-current="page">
+        Contacto
+      </a>
+
+    </nav>
+
+
+    <div class="menu-bottom">
+
+      <div
+        class="language-switcher"
+        aria-label="Idioma">
+
+        <a href="../index.html">
+          PT
+        </a>
+
+        <a href="../../en/index.html">
+          EN
+        </a>
+
+        <a href="#" aria-current="page">
+          ES
+        </a>
+
+      </div>
+
+      <a
+        class="gradient-button"
+        href="hable.html">
+        Solicitar presupuesto
+      </a>
+
+    </div>
+
+  </aside>
+
+</div>
+<main id="main-content" class="page-main">
+  
+  <section class="section section-dark tattoo-contact" aria-labelledby="contact-form-title">
+    <div class="container">
+
+      <div class="contact-intro reveal">
+        <p class="eyebrow">Creemos juntos</p>
+
+        <h2 id="contact-form-title">
+          Cuéntame sobre tu tatuaje
+        </h2>
+
+        <p>
+          Completa algunos datos sobre tu idea. Cuantos más detalles
+          compartas, mejor podré entender el proyecto y ponerme en contacto
+          contigo.
+        </p>
+      </div>
+
+      <form
+        class="form tattoo-form reveal"
+        id="tattoo-contact-form"
+        novalidate>
+
+        <!-- DATOS DEL CLIENTE -->
+        <div class="form-section">
+          <div class="form-section-title">
+            <span>01</span>
+            <h3>Tus datos</h3>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="name">
+                Nombre *
+              </label>
+
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                placeholder="¿Cómo te llamas?"
+                required>
+            </div>
+
+            <div class="field">
+              <label for="phone">
+                WhatsApp *
+              </label>
+
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                placeholder="+00 00000-0000"
+                required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">
+              Correo electrónico
+            </label>
+
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="tucorreo@email.com">
+          </div>
+        </div>
+
+        <!-- IDEA DEL TATUAJE -->
+        <div class="form-section">
+          <div class="form-section-title">
+            <span>02</span>
+            <h3>Sobre tu tatuaje</h3>
+          </div>
+
+          <div class="field">
+            <label for="tattoo-theme">
+              Tema del tatuaje *
+            </label>
+
+            <select
+              id="tattoo-theme"
+              name="tattoo-theme"
+              required>
+
+              <option value="">
+                Selecciona un tema
+              </option>
+
+              <option value="Floral">
+                Floral
+              </option>
+
+              <option value="Animales">
+                Animales
+              </option>
+
+              <option value="Mar / Playa">
+                Mar / Playa
+              </option>
+
+              <option value="Anime / Manga">
+                Anime / Manga
+              </option>
+
+              <option value="Naturaleza">
+                Naturaleza
+              </option>
+
+              <option value="Femenina">
+                Femenina
+              </option>
+
+              <option value="Geométrica">
+                Geométrica
+              </option>
+
+              <option value="Ilustrativa">
+                Ilustrativa
+              </option>
+
+              <option value="Otro">
+                Otro
+              </option>
+
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="placement">
+                Zona del cuerpo *
+              </label>
+
+              <input
+                id="placement"
+                name="placement"
+                type="text"
+                placeholder="Ej.: brazo, espalda, pierna..."
+                required>
+            </div>
+
+            <div class="field">
+              <label for="size">
+                Tamaño aproximado *
+              </label>
+
+              <input
+                id="size"
+                name="size"
+                type="text"
+                placeholder="Ej.: 10 cm"
+                required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="style">
+              Estilo deseado
+            </label>
+
+            <select
+              id="style"
+              name="style">
+
+              <option value="">
+                Selecciona un estilo
+              </option>
+
+              <option value="Colorido">
+                A color / Colorido
+              </option>
+
+              <option value="Delicado">
+                Delicado
+              </option>
+
+              <option value="Ilustrativo">
+                Ilustrativo
+              </option>
+
+              <option value="Fine line">
+                Fine line
+              </option>
+
+              <option value="Blackwork">
+                Blackwork
+              </option>
+
+              <option value="No estoy seguro/a">
+                No estoy seguro/a
+              </option>
+
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">
+              Cuéntame más sobre tu idea *
+            </label>
+
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="Describe tu idea, referencias, significado del tatuaje, elementos que te gustaría incluir..."
+              required></textarea>
+          </div>
+        </div>
+
+        <!-- REFERENCIA Y AGENDAMIENTO -->
+        <div class="form-section">
+          <div class="form-section-title">
+            <span>03</span>
+            <h3>Cita y disponibilidad</h3>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="preferred-date">
+                Fecha deseada
+              </label>
+
+              <input
+                id="preferred-date"
+                name="preferred-date"
+                type="date">
+            </div>
+
+            <div class="field">
+              <label for="location">
+                ¿Dónde prefieres tatuarte?
+              </label>
+
+              <select
+                id="location"
+                name="location">
+
+                <option value="">
+                  Selecciona
+                </option>
+
+                <option value="Crucero">
+                  En el crucero
+                </option>
+
+                <option value="Estudio">
+                  En el estudio
+                </option>
+
+                <option value="Aún no lo sé">
+                  Aún no lo sé
+                </option>
+
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="reference">
+              Referencia del tatuaje
+            </label>
+
+            <input
+              id="reference"
+              name="reference"
+              type="text"
+              placeholder="Pega aquí un enlace o describe una referencia">
+
+            <small>
+              Si tienes imágenes de referencia, podrás enviarlas directamente
+              por WhatsApp después.
+            </small>
+          </div>
+        </div>
+
+        <button
+          class="gradient-button"
+          type="submit">
+          Enviar por WhatsApp
+        </button>
+
+        <p
+          class="form-note"
+          id="form-status"
+          aria-live="polite">
+        </p>
+
+      </form>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="../index.html">Sarah Monteiro</a>
+        <p style="color:#999;max-width:300px;font-size:13px">Tatuadora · Tatuajes a color</p>
+      </div>
+      <div>
+        <p class="footer-title">Navegación</p>
+        <nav class="footer-links" aria-label="Pie de página">
+          <a href="../index.html">Inicio</a>
+          <a href="tattoos.html">Tattoos</a>
+          <!-- <a href="studios.html">Estudios</a> -->
+          <a href="about.html">Sobre mí</a>
+          <!-- <a href="art.html">Arte</a> -->
+          <a href="contact.html">Contacto</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer-title">Redes</p>
+        <div class="socials" aria-label="Redes sociales">
+          <a href="https://www.instagram.com/sarahdastattoo?stkn=MTJkd3M4Mnh6bnF4bw==" aria-label="Instagram" class="social-instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+              <circle cx="12" cy="12" r="4"></circle>
+              <circle cx="17.5" cy="6.5" r="1"></circle>
+            </svg>
+          </a>
+
+          <a href="https://www.tiktok.com/@sarahdastattoo?_r=1&_t=ZS-99Vj3O4w65N" aria-label="TikTok" class="social-tiktok">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15 4v10.2a4.8 4.8 0 1 1-4-4.7"></path>
+              <path d="M15 4c.7 2.2 2.1 3.6 4.5 4"></path>
+            </svg>
+          </a>
+
+          <a href="https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2F5521988873448%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAad6-D7A8l9xZ70h0YghQfUW6RCcIxVkApKidixwBGu0N7ACWwnChVy8mMcFtw_aem_j-tMxQ3hdSYhu5G-tcUstw&e=AUBNr7UOGumpkpTAnaheCkTeTd-aJ5XvVuSEFjGIGTUlXTdqDVBXcERirbh2vFrfXOpmKRzneNu4Z9Kf93nTGCpn9dc0PpFusNNT6RdqSjyLrdtrMb8lCjhgKrj8MWDW-wRiIEJzXE6jlEaUI9qnC1I" aria-label="WhatsApp" class="social-whatsapp">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.5 11.3a8.3 8.3 0 0 1-12.3 7.3L4 20l1.5-4A8.3 8.3 0 1 1 20.5 11.3Z"></path>
+              <path d="M8.5 8.5c.3-.5.6-.5.9-.1l1 1.5c.2.3.2.6-.1.9l-.5.5c.7 1.3 1.7 2.2 3 2.9l.5-.5c.3-.3.6-.3.9-.1l1.5.9c.4.2.4.6.2.9-.4.7-1.1 1.1-1.9 1-3.9-.5-6.7-3.3-7.2-7.2-.1-.7.3-1.5 1-1.8Z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year></span> SARAH MONTEIRO. Todos los derechos reservados.</span>
+      <span><a href="#">Política de privacidad</a> · <a href="#">Términos de uso</a></span>
+    </div>
+  </div>
+</footer>
+<script src="../../assets/js/main.js" defer></script>
+</body>
+</html>

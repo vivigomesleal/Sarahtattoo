@@ -15,44 +15,206 @@
 </head>
 <body>
 
-<a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+<a class="skip-link" href="#main-content">
+  Pular para o conteúdo
+</a>
+
 <header class="site-header">
+
   <div class="container header-inner">
-    <a class="logo" href="index.html" aria-label="Sarah Tattoo — início">Sarah Monteiro</a>
+
+    <!-- LOGO -->
+    <a
+      class="logo"
+      href="index.html"
+      aria-label="Sarah Tattoo — início">
+      Sarah Monteiro
+    </a>
+
+
+    <!-- MENU DESKTOP -->
+    <nav
+      class="desktop-nav"
+      aria-label="Navegação principal">
+
+      <a href="index.html" aria-current="page">
+        Home
+      </a>
+
+      <a href="pages/sobre.html">
+        Sobre mim
+      </a>
+
+      <a href="pages/tatuagem.html">
+        Tattoos
+      </a>
+
+      <a href="pages/contato.html">
+        Contato
+      </a>
+
+    </nav>
+
+
+    <!-- AÇÕES DO HEADER -->
     <div class="header-actions">
-      <nav class="language-switcher" aria-label="Idioma">
-        <a href="index.html" aria-current="page">PT</a>
-        <a href="en/index.html" >EN</a>
-        <a href="es/index.html" >ES</a>
+
+      <!-- IDIOMAS -->
+      <nav
+        class="language-switcher"
+        aria-label="Idioma">
+
+        <a href="index.html" aria-current="page">
+          PT
+        </a>
+
+        <a href="en/index.html">
+          EN
+        </a>
+
+        <a href="es/index.html">
+          ES
+        </a>
+
       </nav>
-      <button class="menu-button" type="button" data-menu-open aria-controls="site-menu" aria-expanded="false">
-        <span class="menu-label">Menu</span>
-        <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+
+
+      <!-- MENU MOBILE -->
+      <button
+        class="menu-button"
+        type="button"
+        data-menu-open
+        aria-controls="site-menu"
+        aria-expanded="false">
+
+        <span class="menu-label">
+          Menu
+        </span>
+
+        <span
+          class="menu-icon"
+          aria-hidden="true">
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+        </span>
+
       </button>
+
     </div>
+
   </div>
+
 </header>
 
-<div class="menu-overlay" data-menu id="site-menu" aria-hidden="true">
-  <button class="menu-backdrop" type="button" data-menu-backdrop aria-label="Fechar menu"></button>
-  <aside class="menu-panel" aria-label="Navegação principal">
+
+<!-- MENU MOBILE / TABLET -->
+
+<div
+  class="menu-overlay"
+  data-menu
+  id="site-menu"
+  aria-hidden="true">
+
+  <button
+    class="menu-backdrop"
+    type="button"
+    data-menu-backdrop
+    aria-label="Fechar menu">
+  </button>
+
+
+  <aside
+    class="menu-panel"
+    aria-label="Navegação principal">
+
     <div class="menu-top">
-      <a class="logo" href="index.html" aria-label="Sarah Tattoo — início">Sarah Monteiro</a>
-      <button class="close-button" type="button" data-menu-close aria-label="Fechar menu">×</button>
+
+      <a
+        class="logo"
+        href="index.html"
+        aria-label="Sarah Tattoo — início">
+        Sarah Monteiro
+      </a>
+
+      <button
+        class="close-button"
+        type="button"
+        data-menu-close
+        aria-label="Fechar menu">
+        ×
+      </button>
+
     </div>
-    <nav class="menu-nav" aria-label="Menu">
-      <a data-menu-link href="index.html" aria-current="page">Home</a><a data-menu-link href="pages/about.html" >Sobre mim</a><a data-menu-link href="pages/tattoos.html" >Tattoos</a><a data-menu-link href="pages/art.html" >Artes</a><a data-menu-link href="pages/studios.html" >Estúdios</a><a data-menu-link href="pages/contact.html" >Contato</a>
+
+
+    <nav
+      class="menu-nav"
+      aria-label="Menu">
+
+      <a
+        data-menu-link
+        href="index.html"
+        aria-current="page">
+        Home
+      </a>
+
+      <a
+        data-menu-link
+        href="pages/sobre.html">
+        Sobre mim
+      </a>
+
+      <a
+        data-menu-link
+        href="pages/tatuagem.html">
+        Tattoos
+      </a>
+
+      <a
+        data-menu-link
+        href="pages/contato.html">
+        Contato
+      </a>
+
     </nav>
+
+
     <div class="menu-bottom">
-      <div class="language-switcher" aria-label="Idioma">
-        <a href="index.html" aria-current="page">PT</a>
-        <a href="en/index.html" >EN</a>
-        <a href="es/index.html" >ES</a>
+
+      <div
+        class="language-switcher"
+        aria-label="Idioma">
+
+        <a href="index.html" aria-current="page">
+          PT
+        </a>
+
+        <a href="en/index.html">
+          EN
+        </a>
+
+        <a href="es/index.html">
+          ES
+        </a>
+
       </div>
-      <a class="gradient-button" href="pages/contact.html">Agendar orçamento</a>
+
+      <a
+        class="gradient-button"
+        href="pages/contato.html">
+        Agendar orçamento
+      </a>
+
     </div>
+
   </aside>
+
 </div>
+
+
 <main id="main-content">
 
   <section class="hero" aria-labelledby="hero-title">
@@ -108,17 +270,17 @@
         class="hero-tabs"
         aria-label="Disponibilidade">
 
-        <a
+        <span
           class="hero-tab"
           href="">
           No estúdio depois de fev/2027
-        </a>
+    </span>
 
-        <a
+        <span
           class="hero-tab is-active"
           href="">
           Hoje estou no cruzeiro
-        </a>
+      </span>
 
       </div>
 
@@ -136,23 +298,26 @@
         <p>Cada tattoo conta uma história. Explore os estilos, cores e universos que fazem parte do meu trabalho.</p>
       </div>
       <div class="tattoo-grid">
-        <a class="tattoo-card reveal" href="pages/tattoos.html"><img src="assets/images/Praia-1.jpg" alt="Exemplo de tatuagem floral colorida" loading="lazy"><h3>Praia</h3></a>
-        <a class="tattoo-card reveal" href="pages/tattoos.html"><img src="assets/images/anime-colorido-1.jpg" alt="Exemplo de tatuagem ilustrativa" loading="lazy"><h3>Coloridos</h3></a>
-        <a class="tattoo-card reveal" href="pages/tattoos.html"><img src="assets/images/bailarina-colorido-1.jpg" alt="Exemplo de tatuagem grande nas costas" loading="lazy"><h3>Delicados</h3></a>
-        <a class="tattoo-card reveal" href="pages/tattoos.html"><img src="assets/images/desenho-colorido-1.jpg" alt="Exemplo de tatuagem de traço fino" loading="lazy"><h3>Ilustrativos</h3></a>
+        <a class="tattoo-card reveal" ><img src="assets/images/Praia-1.jpg" alt="Exemplo de tatuagem floral colorida" loading="lazy"><h3>Praia</h3></a>
+        <a class="tattoo-card reveal" ><img src="assets/images/anime-colorido-1.jpg" alt="Exemplo de tatuagem ilustrativa" loading="lazy"><h3>Coloridos</h3></a>
+        <a class="tattoo-card reveal" ><img src="assets/images/bailarina-colorido-1.jpg" alt="Exemplo de tatuagem grande nas costas" loading="lazy"><h3>Delicados</h3></a>
+        <a class="tattoo-card reveal" ><img src="assets/images/desenho-colorido-1.jpg" alt="Exemplo de tatuagem de traço fino" loading="lazy"><h3>Ilustrativos</h3></a>
       </div>
+      <a class="gradient-button" href="pages/tatuagem.html">Ver Mais</a>
     </div>
   </section>
 
   <section class="section section-gradient story" aria-labelledby="story-title">
     <div class="container reveal">
-      <h2 id="story-title">Seu corpo. Sua história. Minha arte.</h2>
+      <h2 id="story-title">Seu corpo. 
+                       <br>   Sua história. 
+                        <br>  Minha arte.</h2>
       <p>Está esperando o momento certo para fazer aquela tattoo?</p>
-      <a class="gradient-button" href="pages/contact.html">Solicitar orçamento</a>
+      <a class="gradient-button" href="pages/contato.html">Solicitar orçamento</a>
     </div>
   </section>
 
-  <section class="section section-dark" aria-labelledby="studio-title">
+  <!-- <section class="section section-dark" aria-labelledby="studio-title">
     <div class="container studio">
       <div class="studio-media reveal"><img src="https://images.unsplash.com/photo-1580136579312-94651dfd596d?auto=format&fit=crop&w=1400&q=85" alt="Ambiente de estúdio de tatuagem com iluminação roxa" loading="lazy"></div>
       <div class="studio-copy reveal">
@@ -162,9 +327,9 @@
         <a class="outline-button" href="pages/studios.html">Saiba mais sobre os estúdios</a>
       </div>
     </div>
-  </section>
+  </section> -->
 
-  <section class="section section-dark" aria-labelledby="testimonial-title">
+  <!-- <section class="section section-dark" aria-labelledby="testimonial-title">
     <div class="container">
       <div class="section-heading reveal">
         <p class="section-kicker">Depoimentos</p>
@@ -177,9 +342,9 @@
         <cite>[NOME DO CLIENTE]</cite>
       </article>
     </div>
-  </section>
+  </section> -->
 
-  <section class="section section-dark" aria-labelledby="cta-title">
+  <!-- <section class="section section-dark" aria-labelledby="cta-title">
     <div class="container">
       <div class="cta-card reveal">
         <h2 id="cta-title">Pronta para transformar sua ideia em arte?</h2>
@@ -188,7 +353,7 @@
       </div>
     </div>
   </section>
-</main>
+</main> -->
 
 <footer class="site-footer">
   <div class="container">
@@ -200,7 +365,12 @@
       <div>
         <p class="footer-title">Navegação</p>
         <nav class="footer-links" aria-label="Rodapé">
-          <a href="index.html">Home</a><a href="pages/tattoos.html">Tattoos</a><a href="pages/studios.html">Estúdios</a><a href="pages/about.html">Sobre mim</a><a href="pages/art.html">Artes</a><a href="pages/contact.html">Contato</a>
+          <a href="index.html">Home</a>
+          <a href="pages/tatuagem.html">Tattoos</a>
+          <!-- <a href="pages/studios.html">Estúdios</a> -->
+          <a href="pages/sobre.html">Sobre mim</a>
+          <!-- <a href="pages/art.html">Artes</a> -->
+          <a href="pages/contato.html">Contato</a>
         </nav>
       </div>
       <div>
